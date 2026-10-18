@@ -1,0 +1,14 @@
+stages:
+  process_data:
+    cmd: python3 src/data_processing.py
+    deps:
+      - data/raw/customer_churn.csv
+      - src/data_processing.py
+      - src/config.py
+    params:
+      - process.test_size
+      - process.random_state
+    outs:
+      - data/processed/train.csv
+      - data/processed/test.csv
+      - data/processed/reference.csv

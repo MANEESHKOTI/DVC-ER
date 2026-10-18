@@ -1,0 +1,36 @@
+{
+  "success": true,
+  "suite_name": "churn_suite",
+  "statistics": {
+    "evaluated_expectations": 5,
+    "successful_expectations": 5,
+    "unsuccessful_expectations": 0,
+    "success_percent": 100.0
+  },
+  "results": [
+    {
+      "expectation_type": "expect_table_columns_to_match_ordered_set",
+      "success": true
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "feature1",
+      "success": true
+    },
+    {
+      "expectation_type": "expect_column_values_to_not_be_null",
+      "column": "feature2",
+      "success": true
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "column": "category_feature",
+      "success": true
+    },
+    {
+      "expectation_type": "expect_column_values_to_be_in_set",
+      "column": "target",
+      "success": true
+    }
+  ]
+}

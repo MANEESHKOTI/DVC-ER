@@ -1,0 +1,34 @@
+schema: '2.0'
+stages:
+  process_data:
+    cmd: python3 src/data_processing.py
+    deps:
+    - path: data/raw/customer_churn.csv
+      hash: md5
+      md5: 71e6c7a37b14f951bac9d5372eab9559
+      size: 27866
+    - path: src/config.py
+      hash: md5
+      md5: d27ec6c646cdf67e597ed4dc50945730
+      size: 1856
+    - path: src/data_processing.py
+      hash: md5
+      md5: b91d16dfb159b6b1080618b6c64f53d4
+      size: 6858
+    params:
+      params.yaml:
+        process.random_state: 42
+        process.test_size: 0.2
+    outs:
+    - path: data/processed/reference.csv
+      hash: md5
+      md5: a609445fcacbd2afd03964abec95d6fd
+      size: 21503
+    - path: data/processed/test.csv
+      hash: md5
+      md5: 59c6e437e9b5652dc3aab0d32e568731
+      size: 5416
+    - path: data/processed/train.csv
+      hash: md5
+      md5: a609445fcacbd2afd03964abec95d6fd
+      size: 21503

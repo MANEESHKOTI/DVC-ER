@@ -1,0 +1,6 @@
+customer_id,feature1,feature2,category_feature,target
+C8,8.0,16.0,A,0
+C14,14.0,28.0,A,0
+C15,15.0,30.0,A,1
+C9,9.0,18.0,A,1
+C6,6.0,12.0,A,0
